@@ -4,7 +4,6 @@ export const MetalOptions = async () => {
 
     let html = `
         <div class="metal-input">
-            <h2>Metals</h2>
     `
 
     //Generate radio buttons for each metal option and add to html
@@ -16,4 +15,5 @@ export const MetalOptions = async () => {
     html += `
         </div>
     `
+    return html
 }
