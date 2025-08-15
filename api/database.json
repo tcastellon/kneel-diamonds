@@ -70,5 +70,12 @@
       "price": 1241
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "metal": "Palladium",
+      "carats": 1.5,
+      "style": "Vintage",
+      "id": 1
+    }
+  ]
 }
