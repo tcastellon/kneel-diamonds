@@ -11,6 +11,7 @@ export const StyleOptions = async () => {
     const styles = await response.json()
 
     document.addEventListener("change", handleStyleChoice)
+    
     let optionsHTML = ``
 
     //Using map() to generate a new array of strings
