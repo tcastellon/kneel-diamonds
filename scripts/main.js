@@ -1,4 +1,4 @@
-import { MetalOptions } from "./Metals.js"
+import { MetalOptions } from "./MetalOptions.js"
 
 const container = document.querySelector("#container")
 
