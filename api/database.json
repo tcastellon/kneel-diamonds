@@ -70,24 +70,5 @@
       "price": 1241
     }
   ],
-  "orders": [
-    {
-      "metal": "Platinum",
-      "carats": 0.75,
-      "style": "Vintage",
-      "id": 1
-    },
-    {
-      "metal": "Sterling Silver",
-      "carats": 1.5,
-      "style": "Classic",
-      "id": 2
-    },
-    {
-      "metal": "24K Gold",
-      "carats": 0.5,
-      "style": "Modern",
-      "id": 3
-    }
-  ]
+  "orders": []
 }
