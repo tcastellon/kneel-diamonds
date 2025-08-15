@@ -1,6 +1,7 @@
 import { MetalOptions } from "./MetalOptions.js"
 import { SizeOptions } from "./SizeOptions.js"
 import { StyleOptions } from "./StyleOptions.js"
+import { SubmissionButton } from "./PlaceOrderButton.js"
 
 const container = document.querySelector("#container")
 
@@ -8,6 +9,7 @@ const render = async () => {
     const metalOptionsHTML = await MetalOptions()
     const sizeOptionsHTML = await SizeOptions()
     const styleOptionsHTML = await StyleOptions()
+    const buttonHTML = SubmissionButton()
 
     const composedHTML = `
         <h1></h1>
@@ -29,7 +31,7 @@ const render = async () => {
         </article>
         
         <article class="order">
-
+            <div>${buttonHTML}</div>
         </article>
         
         <article class="customOrders">
