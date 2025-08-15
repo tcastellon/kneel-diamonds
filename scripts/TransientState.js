@@ -1,17 +1,23 @@
+//Set up the transient state data structure and provide initial values
 const transientState = {
-    style: "",
+    metal: "",
     carats: 0,
-    metal: ""
+    style: ""
+}
+
+// Functions to modify each property of transient state
+export const setMetal = (chosenMetal) => {
+    transientState.metal = chosenMetal
+    console.log(transientState)
+}
+
+
+export const setCarats = (chosenCarats) => {
+    transientState.carats = chosenCarats
+    console.log(transientState)
 }
 
 export const setStyle = (chosenStyle) => {
     transientState.style = chosenStyle
-}
-
-export const setCarats = (chosenCarats) => {
-    transientState.carats = chosenCarats
-}
-
-export const setMetal = (chosenMetal) => {
-    transientState.metal = chosenMetal
+    console.log(transientState)
 }
