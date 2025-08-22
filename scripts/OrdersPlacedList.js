@@ -6,7 +6,7 @@ export const Orders = async () => {
         (order) => {
             return `
                 <section class="orders-placed-container">
-                    <p>Order #${order.id}</p>
+                    <p>Order #${order.id} costs $${order.price.toFixed(2)}</p>
                 </section>
             `
         }
