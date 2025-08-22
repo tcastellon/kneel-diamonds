@@ -2,7 +2,7 @@ import { setStyle } from "./TransientState.js"
 
 const handleStyleChoice = (event) => {
     if(event.target.name === "style") {
-        setStyle(event.target.value)
+        setStyle(event.target.value, parseFloat(event.target.dataset.styleprice))
     }
 }
 
@@ -18,7 +18,7 @@ export const StyleOptions = async () => {
     const divStringArray = styles.map(
         (style) => {
             return `<div>
-            <input type="radio" name="style" value="${style.style}"/> ${style.style}
+            <input type="radio" name="style" data-stylePrice="${style.price}" value="${style.style}"/> ${style.style}
             </div>`
         }
     )
