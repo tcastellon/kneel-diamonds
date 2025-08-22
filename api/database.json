@@ -70,5 +70,20 @@
       "price": 1241
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "metal": "Palladium",
+      "carats": 0.5,
+      "style": "Classic",
+      "price": 2146,
+      "id": 1
+    },
+    {
+      "metal": "24K Gold",
+      "carats": 0.5,
+      "style": "Classic",
+      "price": 2163.9,
+      "id": 2
+    }
+  ]
 }
