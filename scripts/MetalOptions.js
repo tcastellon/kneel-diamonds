@@ -2,7 +2,7 @@ import { setMetal } from "./TransientState.js"
 
 const handleMetalChoice = (event) => {
     if(event.target.name === "metal") {
-        setMetal(event.target.value)
+        setMetal(event.target.value, parseFloat(event.target.dataset.metalprice))
     }
 }
 
@@ -19,7 +19,7 @@ export const MetalOptions = async () => {
     const divStringArray = metals.map(
         (metal) => {
             return `<div>
-            <input type="radio" name="metal" value="${metal.metal}" /> ${metal.metal}
+            <input type="radio" name="metal" data-metalPrice="${metal.price.toFixed(2)}" value="${metal.metal}" /> ${metal.metal}
             </div>`
         }
     )
