@@ -6,19 +6,22 @@ const transientState = {
 }
 
 // Functions to modify each property of transient state
-export const setMetal = (chosenMetal) => {
+export const setMetal = (chosenMetal, metalPrice) => {
     transientState.metal = chosenMetal
+    transientState.price = metalPrice
     console.log(transientState)
 }
 
 
-export const setCarats = (chosenCarats) => {
+export const setCarats = (chosenCarats, sizePrice) => {
     transientState.carats = chosenCarats
+    transientState.price = transientState.price + sizePrice
     console.log(transientState)
 }
 
-export const setStyle = (chosenStyle) => {
+export const setStyle = (chosenStyle, stylePrice) => {
     transientState.style = chosenStyle
+    transientState.price = parseFloat((transientState.price + stylePrice).toFixed(2))
     console.log(transientState)
 }
 
@@ -41,6 +44,8 @@ export const placeOrder = async () => {
         //Dispatch a custom event when the submission is complete
         const newOrderEvent = new CustomEvent("newOrderPlaced")
         document.dispatchEvent(newOrderEvent)
-        
+        transientState.metal = null
+        transientState.carats = 0
+        transientState.style = null
     }
 }
