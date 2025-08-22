@@ -2,7 +2,7 @@ import { setCarats } from "./TransientState.js"
 
 const handleCaratsChoice = (event) => {
     if(event.target.name === "size") {
-        setCarats(parseFloat(event.target.value))
+        setCarats(parseFloat(event.target.value), parseFloat(event.target.dataset.sizeprice))
     }
 }
 
@@ -19,7 +19,7 @@ export const SizeOptions = async () => {
     const divStringArray = sizes.map(
         (size) => {
             return `<div>
-            <input type="radio" name="size" value="${size.carats}"/> ${size.carats}ct
+            <input type="radio" name="size" data-sizePrice="${size.price}" value="${size.carats}"/> ${size.carats}ct
             </div>`
         }
     )
